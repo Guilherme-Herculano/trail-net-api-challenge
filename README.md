@@ -1,58 +1,58 @@
-# DIO - Trilha .NET - API e Entity Framework
+# DIO - .NET Track - API and Entity Framework
 www.dio.me
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de API e Entity Framework, da trilha .NET da DIO.
+## Project Challenge
+For this challenge, you will need to use the knowledge acquired in the API and Entity Framework module of the .NET track at DIO.
 
-## Contexto
-Você precisa construir um sistema gerenciador de tarefas, onde você poderá cadastrar uma lista de tarefas que permitirá organizar melhor a sua rotina.
+## Context
+You need to build a task management system where you can create a list of tasks to better organize your routine.
 
-Essa lista de tarefas precisa ter um CRUD, ou seja, deverá permitir a você obter os registros, criar, salvar e deletar esses registros.
+This task list needs to have CRUD operations, meaning it should allow you to retrieve, create, save, and delete records.
 
-A sua aplicação deverá ser do tipo Web API ou MVC, fique a vontade para implementar a solução que achar mais adequado.
+Your application should be a Web API or MVC, feel free to implement the solution that you find most suitable.
 
-A sua classe principal, a classe de tarefa, deve ser a seguinte:
+Your main class, the task class, should be as follows:
 
-![Diagrama da classe Tarefa](diagrama.png)
+![Task Class Diagram](diagram.png)
 
-Não se esqueça de gerar a sua migration para atualização no banco de dados.
+Don't forget to generate your migration for database updates.
 
-## Métodos esperados
-É esperado que você crie o seus métodos conforme a seguir:
+## Expected Methods
+It is expected that you create your methods as follows:
 
 
 **Swagger**
 
 
-![Métodos Swagger](swagger.png)
+![Swagger Methods](swagger.png)
 
 
 **Endpoints**
 
 
-| Verbo  | Endpoint                | Parâmetro | Body          |
+| Ver    | Endpoint                | Parameter | Body          |
 |--------|-------------------------|-----------|---------------|
-| GET    | /Tarefa/{id}            | id        | N/A           |
-| PUT    | /Tarefa/{id}            | id        | Schema Tarefa |
-| DELETE | /Tarefa/{id}            | id        | N/A           |
-| GET    | /Tarefa/ObterTodos      | N/A       | N/A           |
-| GET    | /Tarefa/ObterPorTitulo  | titulo    | N/A           |
-| GET    | /Tarefa/ObterPorData    | data      | N/A           |
-| GET    | /Tarefa/ObterPorStatus  | status    | N/A           |
-| POST   | /Tarefa                 | N/A       | Schema Tarefa |
+| GET    | /Task/{id}              | id        | N/A           |
+| PUT    | /Task/{id}              | id        | Schema Task   |
+| DELETE | /Task/{id}              | id        | N/A           |
+| GET    | /Task/GetAll            | N/A       | N/A           |
+| GET    | /Task/GetByTitle        | title     | N/A           |
+| GET    | /Task/GetByDate         | data      | N/A           |
+| GET    | /Task/GetByStatus       | status    | N/A           |
+| POST   | /Task                   | N/A       | Schema Task   |
 
-Esse é o schema (model) de Tarefa, utilizado para passar para os métodos que exigirem
+This is the schema (model) for Task, used to pass to methods that require it:
 
 ```json
 {
   "id": 0,
-  "titulo": "string",
-  "descricao": "string",
-  "data": "2022-06-08T01:31:07.056Z",
-  "status": "Pendente"
+  "title": "string",
+  "description": "string",
+  "date": "2022-06-08T01:31:07.056Z",
+  "status": "Pending"
 }
 ```
 
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+## Solution
+The code is halfway done, and you should continue following the rules described above so that, in the end, we have a functional program. Look for the commented word "TODO" in the code, then implement according to the rules above.
